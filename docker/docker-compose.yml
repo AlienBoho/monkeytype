@@ -35,6 +35,8 @@ services:
       - REDIS_URI=redis://monkeytype-redis:6379
       - FRONTEND_URL=${MONKEYTYPE_FRONTENDURL}
       - RECAPTCHA_SECRET=${RECAPTCHA_SECRET:-}
+      #needs to be set if not using account system
+      - MODE=dev
     volumes:
       #uncomment to enable the account system, check the SELF_HOSTING.md file
       #- type: bind
